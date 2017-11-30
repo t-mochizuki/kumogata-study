@@ -8,7 +8,7 @@ template do
 
   Parameters do
     InstanceType do
-      Default "t2.micro"
+      Default "t2.nano"
       Description "Instance Type"
       Type "String"
     end
@@ -16,7 +16,8 @@ template do
 
   Mappings do
     AWSInstanceType2Arch(
-      {"t2.micro"=>{"Arch"=>"HVM64"}}
+      {"t2.nano"=>{"Arch"=>"HVM64"},
+       "t2.micro"=>{"Arch"=>"HVM64"}}
     )
     AWSRegionArch2AMI(
       {"ap-northeast-1"=>{"HVM64"=>"ami-374db956"}}
