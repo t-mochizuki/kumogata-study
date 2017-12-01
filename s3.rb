@@ -19,6 +19,7 @@ template do
         AccessControl "Private"
         BucketName "t-mochizuki"
       end
+      DeletionPolicy "Retain"
     end
   end
 end
